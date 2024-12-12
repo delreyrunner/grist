@@ -19,6 +19,14 @@ services:
         value: "true"
       - key: GRIST_HIDE_UI_ELEMENTS
         value: "helpCenter,billing,templates,multiSite,multiAccounts"
+      - key: GRIST_FORCE_SSL
+        value: "true"
+      - key: PORT
+        value: "10000"
+      - key: GRIST_FORWARD_AUTH_HEADER
+        value: "true"
+      - key: APP_HOME_URL
+        value: "https://grist-mwrw.onrender.com"
     disk:
       name: grist-data
       mountPath: /persist
