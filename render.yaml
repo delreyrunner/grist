@@ -21,21 +21,13 @@ services:
         value: "helpCenter,billing,templates,multiSite,multiAccounts"
       - key: GRIST_FORCE_SSL
         value: "true"
-      - key: PORT
-        value: "10000"
-      - key: GRIST_FORWARD_AUTH_HEADER
-        value: "true"
-      - key: GRIST_APP_HOME_URL
-        value: "https://grist-mwrw.onrender.com:10000"
-      - key: GRIST_API_HOST
-        value: "https://grist-mwrw.onrender.com:10000"
-      - key: GRIST_HTTPS_URLS
-        value: "true"
-      - key: GRIST_SERVE_PORT
-        value: "10000"
       - key: GRIST_HOST
         value: "0.0.0.0"
-      - key: GRIST_PROXY_AUTH
+      - key: GRIST_APP_HOME_URL
+        value: "https://grist-mwrw.onrender.com"
+      - key: GRIST_API_HOST
+        value: "https://grist-mwrw.onrender.com"
+      - key: GRIST_HTTPS_URLS
         value: "true"
     disk:
       name: grist-data
