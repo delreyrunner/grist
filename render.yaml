@@ -1,0 +1,25 @@
+services:
+  - type: web
+    name: grist
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: starter
+    envVars:
+      - key: GRIST_SESSION_SECRET
+        generateValue: true
+      - key: GRIST_DEFAULT_EMAIL
+        sync: false
+      - key: GRIST_DEFAULT_PASSWORD
+        sync: false
+      - key: GRIST_SINGLE_ORG
+        value: "true"
+      - key: GRIST_ORG_IN_PATH
+        value: "false"
+      - key: GRIST_SERVE_SAME_ORIGIN
+        value: "true"
+      - key: GRIST_HIDE_UI_ELEMENTS
+        value: "helpCenter,billing,templates,multiSite,multiAccounts"
+    disk:
+      name: grist-data
+      mountPath: /persist
+      sizeGB: 1
